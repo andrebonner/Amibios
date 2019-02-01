@@ -1,4 +1,5 @@
 ﻿@{
+    Layout = "~/Views/Shared/Landing_Layout.cshtml";
     ViewBag.Title = "Home Page";
 }
 
@@ -391,7 +392,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
     </header>
     <div class="content">
         <p><strong>Auctor commodo</strong> interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis.</p>
-        <form>
+        <form action="~/Mail" method="post">
             <div class="fields">
                 <div class="field half">
                     <input type="text" name="name" id="name" placeholder="Name" />

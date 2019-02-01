@@ -12,6 +12,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="~/Content/assets/css/main.css" />
+    <link rel="stylesheet" href="~/Content/toastr.css" />
 </head>
 <body class="is-preload">
 
@@ -20,7 +21,7 @@
 
         @RenderBody()
         <!-- Copyright -->
-        <div class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+        <div class="copyright">&copy; Amibios. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
 
     </div>
 
@@ -31,6 +32,19 @@
     <script src="~/Content/assets/js/breakpoints.min.js"></script>
     <script src="~/Content/assets/js/util.js"></script>
     <script src="~/Content/assets/js/main.js"></script>
-
+    <script src="~/Scripts/toastr.js"></script>
+    <script>
+        var status = "@ViewBag.status",
+            text = "@ViewBag.text";
+        switch (status) {
+            case "success":
+                toastr.success(text);
+                break;
+            case "error":
+                toastr.error(text);
+                break;
+            default:
+        }
+    </script>
 </body>
 </html>

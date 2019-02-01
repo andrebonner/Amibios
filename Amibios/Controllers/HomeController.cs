@@ -10,6 +10,8 @@ namespace Amibios.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.status = TempData["status"];
+            ViewBag.text = TempData["text"];
             return View();
         }
 
